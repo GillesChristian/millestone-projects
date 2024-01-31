@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter Preview</title>
+  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      color: #030712;
+    }
+    body {
+      background: #cbd5e1;
+      font-family: "Source Code Pro", sans-serif;
+    }
+    main {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .form {
+      padding: 20px 30px;
+    }
+    .form-wrapper {
+      background: #f8fafc;
+      border-radius: 5px;
+      width: 360px;
+      box-shadow: #9cabc0dc 2px 4px 30px;
+      margin: 50px auto;
+    }
+    h3 {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .group-field {
+      display: flex;
+      gap: 5%;
+      width: 95%;
+    }
+    .form-field {
+      padding: 10px 0 0 0;
+      width: 95%;
+    }
+    input,
+    select {
+      font-family: "Source Code Pro", sans-serif;
+      display: block;
+      width: 100%;
+      height: 35px;
+      outline: none;
+      border-style: black;
+      padding-left: 5px;
+      border-radius: 2px;
+    }
+    label {
+      font-size: larger;
+    }
+    .form-btn {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      font-weight: 400;
+      transition: 0.5s ease-in-out;
+      color: #f8fafc;
+      background: #475569;
+      font-family: "Source Code Pro", sans-serif;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0f172a;
+    }
+
+    /* Styling the Preview  */
+    .custom-letter {
+      margin: 0 auto;
+      width: 695px;
+      background: #ffffff;
+      box-shadow: #94a3b8dc 2px 4px 30px;
+      transform: scale(0.95);
+      font-family: "Times New Roman", Times, serif;
+    }
+    .template {
+      padding: 55px 60px;
+    }
+    .letter-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid black;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2px;
+      margin-bottom: 15px;
+      height: 100px;
+    }
+    .logo {
+      transform: scale(0.12);
+      max-width: 150px;
+      text-align: left;
+      align-items: center;
+      position: relative;
+    }
+    img {
+      margin-left: -300px;
+      margin-top: -340px;
+      object-fit: contain;
+    }
+    .republic {
+      text-align: center;
+    }
+    .date-container {
+      text-align: right;
+      margin-top: 15px;
+    }
+    span.date {
+      font-family: "Oswald", sans-serif;
+      border-bottom: 1px solid black;
+      color: firebrick;
+      font-family: sans-serif;
+      letter-spacing: -0.8px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    p {
+      color: black;
+      font-size: smaller;
+    }
+    .letter-body > p {
+      font-size: large;
+    }
+    :not(.letter-footer, .staff-info, .republic, .university) > p {
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+    .letter-footer > p {
+      font-style: italic;
+      font-size: small;
+    }
+    #salut {
+      font-size: large;
+      margin-bottom: 70px;
+    }
+    .bold {
+      font-weight: 600;
+    }
+    .larger {
+      display: none;
+    }
+    @media screen and (max-width: 1024px) {
+      main {
+        display: none;
+      }
+      .larger {
+        display: block;
+        text-align: center;
+        margin: 20% auto;
+        width: 90%;
+        font-size: xx-large;
+        font-weight: 800;
+        color: #0f172a;
+        font-family: monospace;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="custom-letter">
+      <div class="template">
+        <div class="letter-header">
+          <div class="flex-container">
+            <div class="university">
+              <h4>UNIVERSITY OF BUEA</h4>
+              <p>P.O Box 63,</p>
+              <p>Buea, South West Region</p>
+              <p>CAMEROON</p>
+              <p>Tel: (237) 3332 21 34/3332 26 90</p>
+              <p>Fax:: (237) 3332 22 27</p>
+            </div>
+            <div class="logo">
+              <img src="UBlogo.png" alt="university of buea" />
+            </div>
+            <div class="republic">
+              <h4 class="bold">REPUBLIC OF CAMEROON</h4>
+              <p>PEACE-WORK-FATHERLAND</p>
+            </div>
+          </div>
+          <div class="staff-info">
+            <p class="bold">FACULTY OF ENGINEERING AND TECHNOLOGY</p>
+            <p>Dean: <span class="bold">Agbor Dieudonne Agbor, PhD</span></p>
+            <p>Vice-Dean: <span class="bold">Dr. Nde D. Nguti</span></p>
+            <p>
+              Faculty Officer:
+              <span class="bold">Mme. Ekpombang Patience Taku</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="letter-body">
+          <div class="date-container">
+            <span class="bold"
+              >Date : <span class="date"><%= date %></span></span
+            >
+          </div>
+          <h2>Letter of Recommendation</h2>
+          <p>Office of Human Resources</p>
+          <p>
+            <span class="std-tit bold"></span>
+            <span class="std-name bold"><%= name %></span> is a student of the
+            Faculty of Engineering and Technology (FET) of University of Buea,
+            with matriculation number
+            <span id="std-mat" class="bold"> <%= matricule %> </span>.
+            <span id="std-pron"> <%= gender %> </span> is currently a
+            <span class="std-lvl"> <%= level %> </span> student studying for an
+            undergraduate degree program in
+            <span class="bold">
+              <span id="std-dept"> <%= department %> </span> Engineering</span
+            >. Admissions into this Faculty is based on academic excellence,
+            consequently only meritious candidates are enrolled into the
+            Faculty. Being a Level <span class="std-lvl"> <%= level %> </span>,
+            the candidate must have acquired some basic academic knowledge and
+            skills necessary to undertake such practicum.
+          </p>
+          <p>
+            So we recommend <span class="std-tit bold"></span>
+            <span class="std-name bold"> <%= name %> </span>
+            for a position of internship in your organisation in any Engineering
+            duties and research activities of <%= pronoun %> field. This
+            placement will enchance the professional development of the student
+            and we count on <%= pronoun %> sense of commitment and assiduity to
+            ensure a successful training.
+          </p>
+        </div>
+
+        <p id="salut">Sincerely,</p>
+        <div class="letter-footer">
+          <p class="bold">Marie Eboh Agbortabot Bissong, PhD</p>
+          <p>Associate Professor of Molecular Microbiology</p>
+          <p>HOS/ Internships</p>
+          <p>P.O.Box 63, University of Buea, Cameroon</p>
+          <p>Cell: +237 675301641; +237 695794857</p>
+          <p>
+            Email: <u>agbortabot.marie@ubuea.net</u>, <u>mabissong@yahoo.com</u>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
