@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="form-wrapper">
+            <form class="form" id="form">
+                <h3>Recommendation Form</h3>
+                <div class="form-field">
+                    <label for="username">Name</label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="matricule">Matricule</label>
+                    <input type="text" name="matricule" id="matricule" required>
+                </div>
+
+                <div class="group-field">
+                    <div class="form-field">
+                        <label for="level">Level</label>
+                        <select name="level" id="level">
+                            <option value="200">L 200</option>
+                            <option value="300">L 300</option>
+                            <option value="400">L 400</option>
+                            <option value="500">L 500</option>
+                            <option value="600">L 600</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="sex">Sex</label>
+                        <select name="sex" id="sex">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="department">Department</label>
+                    <select name="department" id="department">
+                        <option value="Civil">Civil Engineering</option>
+                        <option value="Computer">Computer Engineering</option>
+                        <option value="Electrical">Electrical Engineering</option>
+                        <option value="Mechanical">Mechanical Engineering</option>
+                    </select>
+                </div>
+
+                <div class="form-btn">
+                    <button type="button" id="preview">Preview</button>
+                    <button type="button" id="download">Download</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="custom-letter">
+            <div class="template">
+                <div class="letter-header">
+                    <div class="flex-container">
+                        <div class="university">
+                            <h4>UNIVERSITY OF BUEA</h4>
+                            <p>P.O Box 63,</p>
+                            <p>Buea, South West Region</p>
+                            <p>CAMEROON</p>
+                            <p>Tel: (237) 3332 21 34/3332 26 90</p>
+                            <p>Fax:: (237) 3332 22 27</p>
+                        </div>
+                        <div class="logo">
+                            <img src="./UBlogo.png" alt="university of buea">
+                        </div>
+                        <div class="republic">
+                            <h4 class="bold">REPUBLIC OF CAMEROON</h4>
+                            <p>PEACE-WORK-FATHERLAND</p>
+                        </div>
+                    </div>
+                    <div class="staff-info">
+                        <p class="bold">FACULTY OF ENGINEERING AND TECHNOLOGY</p>
+                        <p>Dean: <span class="bold">Agbor Dieudonne Agbor, PhD</span></p>
+                        <p>Vice-Dean: <span class="bold">Dr. Nde D. Nguti</span></p>
+                        <p>Faculty Officer: <span class="bold">Mme. Ekpombang Patience Tacu</span></p>
+                    </div>
+                </div>
+
+                <div class="letter-body">
+                    <div class="date-container">
+                        <span class="bold">Date : <span class="date">XX XXX XXXX</span></span>
+                    </div>
+                    <h2>Letter of Recommendation</h2>
+                    <p>Office of Human Resources</p>
+                    <p>
+                        <span class="std-tit bold"></span> <span class="std-name bold">XXXXXXXXX</span> is a student of
+                        the Faculty of Engineering and Technology (FET) of University of Buea, with matriculation number
+                        <span id="std-mat" class="bold">XXXXXXXX</span>. <span id="std-pron">XX</span> is currently a
+                        Level <span class="std-lvl">XXX</span> student studying for an undergraduate degree program in
+                        <span class="bold"><span id="std-dept">XXXXXXXX</span> Engineering</span>. Admissions into this
+                        Faculty is based on academic excellence, consequently only meritious candidates are enrolled
+                        into the Faculty. Being a Level <span class="std-lvl">XXX</span>, the candidate must have
+                        acquired some basic academic knowledge and skills necessary to undertake such practicum.
+                    </p>
+                    <p>
+                        So we recommend <span class="std-tit bold"></span> <span class="std-name bold">XXXXXXXXX</span>
+                        for a position of intership in your organisation in any Engineering duties and research
+                        activities of his field. This placement will enchance the professional development of the
+                        student and we count on his sense of commitment and assiduity to ensure a successful training.
+                    </p>
+                </div>
+
+                <p id="p">Sincerely,</p>
+                <div class="letter-footer">
+                    <p class="bold">Marie Eboh Agbortabot Bissong, PhD</p>
+                    <p>Associate Professor of Molecular Microbiology</p>
+                    <p>HOS/ Internships</p>
+                    <p>P.O.Box 63, University of Buea, Cameroon</p>
+                    <p>Cell: +237 675301641; +237 695794857</p>
+                    <p>Email: <u>agbortabot.marie@ubuea.net</u>, <u>mabissong@yahoo.com</u></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="larger">
+        Please open on a larger screen!
+    </div>
+    <script src="./Script/script.js"></script>
+</body>
+
+</html>
