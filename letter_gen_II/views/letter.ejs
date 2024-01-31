@@ -12,13 +12,23 @@
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet"
   />
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <style>
     * {
       padding: 0;
       margin: 0;
       color: #030712;
     }
+
+    .container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
     body {
       background: #cbd5e1;
       font-family: "Source Code Pro", sans-serif;
@@ -36,7 +46,7 @@
       border-radius: 5px;
       width: 360px;
       box-shadow: #9cabc0dc 2px 4px 30px;
-      margin: 50px auto;
+      margin: 0px auto;
     }
     h3 {
       text-align: center;
@@ -180,89 +190,117 @@
         color: #0f172a;
         font-family: monospace;
       }
+      .download {
+        font-size: 30px;
+      }
     }
   </style>
 
   <body>
-    <div class="custom-letter">
-      <div class="template">
-        <div class="letter-header">
-          <div class="flex-container">
-            <div class="university">
-              <h4>UNIVERSITY OF BUEA</h4>
-              <p>P.O Box 63,</p>
-              <p>Buea, South West Region</p>
-              <p>CAMEROON</p>
-              <p>Tel: (237) 3332 21 34/3332 26 90</p>
-              <p>Fax:: (237) 3332 22 27</p>
+    <div class="container">
+      <div class="custom-letter">
+        <div class="template">
+          <div class="letter-header">
+            <div class="flex-container">
+              <div class="university">
+                <h4>UNIVERSITY OF BUEA</h4>
+                <p>P.O Box 63,</p>
+                <p>Buea, South West Region</p>
+                <p>CAMEROON</p>
+                <p>Tel: (237) 3332 21 34/3332 26 90</p>
+                <p>Fax:: (237) 3332 22 27</p>
+              </div>
+              <div class="logo">
+                <img src="UBlogo.png" alt="university of buea" />
+              </div>
+              <div class="republic">
+                <h4 class="bold">REPUBLIC OF CAMEROON</h4>
+                <p>PEACE-WORK-FATHERLAND</p>
+              </div>
             </div>
-            <div class="logo">
-              <img src="UBlogo.png" alt="university of buea" />
-            </div>
-            <div class="republic">
-              <h4 class="bold">REPUBLIC OF CAMEROON</h4>
-              <p>PEACE-WORK-FATHERLAND</p>
+            <div class="staff-info">
+              <p class="bold">FACULTY OF ENGINEERING AND TECHNOLOGY</p>
+              <p>Dean: <span class="bold">Agbor Dieudonne Agbor, PhD</span></p>
+              <p>Vice-Dean: <span class="bold">Dr. Nde D. Nguti</span></p>
+              <p>
+                Faculty Officer:
+                <span class="bold">Mme. Ekpombang Patience Taku</span>
+              </p>
             </div>
           </div>
-          <div class="staff-info">
-            <p class="bold">FACULTY OF ENGINEERING AND TECHNOLOGY</p>
-            <p>Dean: <span class="bold">Agbor Dieudonne Agbor, PhD</span></p>
-            <p>Vice-Dean: <span class="bold">Dr. Nde D. Nguti</span></p>
+
+          <div class="letter-body">
+            <div class="date-container">
+              <span class="bold"
+                >Date : <span class="date"><%= date %></span></span
+              >
+            </div>
+            <h2>Letter of Recommendation</h2>
+            <p>Office of Human Resources</p>
             <p>
-              Faculty Officer:
-              <span class="bold">Mme. Ekpombang Patience Taku</span>
+              <span class="std-tit bold"></span>
+              <span class="std-name bold"><%= name %></span> is a student of the
+              Faculty of Engineering and Technology (FET) of University of Buea,
+              with matriculation number
+              <span id="std-mat" class="bold"> <%= matricule %> </span>.
+              <span id="std-pron"> <%= gender %> </span> is currently a
+              <span class="std-lvl"> <%= level %> </span> student studying for
+              an undergraduate degree program in
+              <span class="bold">
+                <span id="std-dept"> <%= department %> </span> Engineering</span
+              >. Admissions into this Faculty is based on academic excellence,
+              consequently only meritious candidates are enrolled into the
+              Faculty. Being a Level
+              <span class="std-lvl"> <%= level %> </span>, the candidate must
+              have acquired some basic academic knowledge and skills necessary
+              to undertake such practicum.
+            </p>
+            <p>
+              So we recommend <span class="std-tit bold"></span>
+              <span class="std-name bold"> <%= name %> </span>
+              for a position of internship in your organisation in any
+              Engineering duties and research activities of <%= pronoun %>
+              field. This placement will enchance the professional development
+              of the student and we count on <%= pronoun %> sense of commitment
+              and assiduity to ensure a successful training.
+            </p>
+          </div>
+
+          <p id="salut">Sincerely,</p>
+          <div class="letter-footer">
+            <p class="bold">Marie Eboh Agbortabot Bissong, PhD</p>
+            <p>Associate Professor of Molecular Microbiology</p>
+            <p>HOS/ Internships</p>
+            <p>P.O.Box 63, University of Buea, Cameroon</p>
+            <p>Tel: +237 675301641; +237 695794857</p>
+            <p>
+              Email:
+              <a href="mailto:agbortabot.marie@ubuea.net"
+                >agbortabot.marie@ubuea.net</a
+              >,
+              <a href="mailto:mabissong@yahoo.com">mabissong@yahoo.com</a>
             </p>
           </div>
         </div>
-
-        <div class="letter-body">
-          <div class="date-container">
-            <span class="bold"
-              >Date : <span class="date"><%= date %></span></span
-            >
-          </div>
-          <h2>Letter of Recommendation</h2>
-          <p>Office of Human Resources</p>
-          <p>
-            <span class="std-tit bold"></span>
-            <span class="std-name bold"><%= name %></span> is a student of the
-            Faculty of Engineering and Technology (FET) of University of Buea,
-            with matriculation number
-            <span id="std-mat" class="bold"> <%= matricule %> </span>.
-            <span id="std-pron"> <%= gender %> </span> is currently a
-            <span class="std-lvl"> <%= level %> </span> student studying for an
-            undergraduate degree program in
-            <span class="bold">
-              <span id="std-dept"> <%= department %> </span> Engineering</span
-            >. Admissions into this Faculty is based on academic excellence,
-            consequently only meritious candidates are enrolled into the
-            Faculty. Being a Level <span class="std-lvl"> <%= level %> </span>,
-            the candidate must have acquired some basic academic knowledge and
-            skills necessary to undertake such practicum.
-          </p>
-          <p>
-            So we recommend <span class="std-tit bold"></span>
-            <span class="std-name bold"> <%= name %> </span>
-            for a position of internship in your organisation in any Engineering
-            duties and research activities of <%= pronoun %> field. This
-            placement will enchance the professional development of the student
-            and we count on <%= pronoun %> sense of commitment and assiduity to
-            ensure a successful training.
-          </p>
-        </div>
-
-        <p id="salut">Sincerely,</p>
-        <div class="letter-footer">
-          <p class="bold">Marie Eboh Agbortabot Bissong, PhD</p>
-          <p>Associate Professor of Molecular Microbiology</p>
-          <p>HOS/ Internships</p>
-          <p>P.O.Box 63, University of Buea, Cameroon</p>
-          <p>Cell: +237 675301641; +237 695794857</p>
-          <p>
-            Email: <u>agbortabot.marie@ubuea.net</u>, <u>mabissong@yahoo.com</u>
-          </p>
-        </div>
+      </div>
+      <div class="download">
+        <i class='fas fa-download'></i>
       </div>
     </div>
   </body>
+
+  <script>
+    const letterDownload = () => {
+      const letter = document.querySelector(".template");
+      const options = {
+        filename: "recommendation_letter",
+        margin: 10,
+        html2canvas: { scale: 2 },
+        image: { type: "png", quality: 0.99, compression: "best" },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        output: "blob",
+      };
+      html2pdf().from(letter).set(options).save();
+    };
+  </script>
 </html>
