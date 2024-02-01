@@ -1,0 +1,31 @@
+{
+    "quotes":
+    [
+        {
+          "id": 1,
+          "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+          "author": "Franklin D. Roosevelt"
+        },
+        {
+          "id": 2,
+          "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+          "author": "Nelson Mandela"
+        },
+        {
+          "id": 3,
+          "quote": "Your time is limited, don't waste it living someone else's life.",
+          "author": "Steve Jobs"
+        },
+        {
+          "id": 4,
+          "quote": "The purpose of our lives is to be happy.",
+          "author": "Dalai Lama"
+        },
+        {
+          "id": 5,
+          "quote": "Life is what happens when you're busy making other plans.",
+          "author": "John Lennon"
+        }
+      ]
+      
+}

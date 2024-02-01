@@ -73,7 +73,7 @@ const displayResult = () => {
                 clearInterval(timer);
             else
                 count++;
-        },50)
+        },100)
             
     }
 };
