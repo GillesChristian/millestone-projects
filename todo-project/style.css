@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+main{
+    width: 90%;
+    max-width: 880px;
+    margin: 5% auto;
+    border: 1px solid;
+    padding: 40px 30px;
+}
+.formContainer{
+    border: 1px solid;
+    padding: 10px;
+}
+form{
+    padding: 20px 30px;
+}
+header{
+    text-align: center;
+    font-size: large;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+label{
+    font-size: x-large;
+}
+input,select{
+    padding: 4px 5px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+.formBtn{
+    margin: 40px 0 0 0;
+    padding: 10px 0;
+    text-align: center;
+}
+button{
+    font-size: large;
+    padding: 10px 30px ;
+    margin: 0 15px;
+}
+.todoListContainer{
+    border: 1px solid;
+    padding: 5px 5px;
+}
+.todo{
+    padding: 20px 45px;
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
+    margin-bottom: 5px;
+    margin: 10px;
+    border: 1px solid;
+    transition: 0.3s ease-in-out;
+}
+.todo:hover{
+    transform: scale(1.02);
+}
+.todoList{
+    display: flex;
+    gap: 10px;
+}
+.check{
+    width: 25px;
+    height: 25px;
+}
+.under{
+    text-decoration: line-through;
+    font-weight: 200;
+    color: #7f7f7f;
+}

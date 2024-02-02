@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="formContainer">
+      <form action="" id="form">
+        <header>
+          <h1>To-do List Project</h1>
+        </header>
+        <div class="field">
+          <label for="task">Task:<span class="asterics">*</span></label>
+          <input type="text" name="task" id="task" placeholder="Enter a task" required />
+        </div>
+        <div class="field">
+          <label for="flag">Status:<span class="asterics">*</span></label>
+          <select name="flag" id="flag">
+            <option value="high">High</option>
+            <option value="meduim">Medium</option>
+            <option value="weak">Weak</option>
+          </select>
+        </div>
+        <div class="formBtn">
+          <button type="reset" class="cancel">Cancel</button>
+          <button type="submit" id="addTodo">Add Todo</button>
+        </div>
+      </form>
+    </div>
+    <div class="todoListContainer">
+
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
