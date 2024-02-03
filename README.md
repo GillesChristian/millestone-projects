@@ -14,3 +14,8 @@ Certainly! Here's a description for a "Milestone Projects" section on a website 
    - **Description:** The application dynamically generates a well-formatted recommendation letter based on the provided information.
    - **Technologies Used:** HTML, CSS & JAVASCRIPT.
    - **Key Achievements:** Real-Tme Privew, Customisation, Download as PDF etc.
+
+3. **Todo Project**
+   - **Description:** The application list down task to be done and improve your daily organisation.
+   - **Technologies Used:** HTML, CSS & JAVASCRIPT.
+   - **Key Achievements:** Dynamically Set Todo, Customisation etc.
