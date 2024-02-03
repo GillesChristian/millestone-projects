@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+html{
+    background-image: url('./bg.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+body{
+    background-color: #5858584f;
+    margin-top: -200px;
+    padding-top: 200px;
+    height: 100vh;
+}
+main{
+    width: 80%;
+    margin: 5% auto;
+    padding: 30px;
+    background: #ffffff4c;
+    -webkit-backdrop-filter: blur(40);
+    backdrop-filter: blur(40);
+    box-shadow: #f0f0f0 1px  1px 15px -10px;
+    border-radius: 5px;
+}
+header{
+    text-align: center;
+    margin-top: 50px;
+}
+h1{
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 20px 0;
+
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: x-large;
+    margin:  0 10px 0;
+}
+.weatherContainer{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+.weather{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+}
+.degree{
+    font-size: 4em;
+    font-weight: 100;
+}
+.locationContainer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.city{
+    font-weight: 500;
+    font-size: 20px;
+}
+.searchLocation{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+input{
+    border: 1px solid #3e69914a;
+    padding: 7px 15px;
+    font-size: 20px;
+    border-radius: 1px;
+    background: #3e699109;
+    width: 300px;
+    outline: none;
+}
+input::placeholder{
+    color: #fafafa;
+}
+input:focus{
+    border: 1px solid #3E69914d;
+}
+button{
+    padding: 10px 25px;
+    border-style: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+    background: #3e69914a;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover{
+    background: #3e69919c;
+}
+
+@media only screen and (min-width: 1201px) {
+    main {
+        width: 60%;
+        margin: 3% auto;
+    }
+
+}
