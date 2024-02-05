@@ -1,30 +1,28 @@
+const form = document.querySelector("#form");
+const todoContainer = document.querySelector(".todoContainer");
+const generateTodo = (todo) => {
+    const template =  `
+            <div class="todo">
+                <span class="myTodo">${todo}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="delete" width="36" height="36" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z"/></svg>
 
-const todoLists = document.querySelector(".todoListContainer"); 
-const addTodo = document.querySelector("#form");
-
-addTodo.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    const todoList  = `
-        <div class="todo">
-            <div class="todoList">
-                <input type="checkbox" name="check" class="check" onchange="checkTodo(this)">
-                <span class="myTodo">${task.value}</span>
             </div>
-            <span class="todoStatus">${flag.value}</span>
-        </div>
-    `;
+        `
+    ;
+    todoContainer.innerHTML += template;
+}
 
-    todoLists.innerHTML += todoList;
+form.addEventListener("submit", e => {
+
+    e.preventDefault();
+    const todo = form.task.value.trim();
+
+    generateTodo(todo);
+    form.reset();
 });
 
-function checkTodo(checkbox) {
-    const todoElement = checkbox.closest('.todo');
-    const myTodoElement = todoElement.querySelector('.myTodo');
 
-    if (checkbox.checked) {
-        myTodoElement.classList.add('under');
-    } else {
-        myTodoElement.classList.remove('under');
-    }
-}
+todoContainer.addEventListener('click',  e => {
+    if(e.target.classList.contains('delete')) 
+        e.target.parentElement.remove(); 
+});
