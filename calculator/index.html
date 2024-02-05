@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="" id="form">
+            <header>
+                <h1>Calculator App</h1>
+                <div class="screenContainer">
+                    <input type="text" name="screen" id="screen" placeholder="0">
+                </div>
+            </header>
+            <section>
+                <div class="flexContainer">
+                    <button type="reset" class="btn operator">C</button>
+                    <button type="button" class="btn operator">-/+</button>
+                    <button type="button" class="btn operator svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--tabler" width="40" height="40" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5-5a1.5 1.5 0 0 1 0-2l5-5zm-8 4l4 4m0-4l-4 4"></path></svg>
+                    </button>
+                    <button type="button" class="btn operation">/</button>
+                </div>
+                <div class="flexContainer">
+                    <button type="button" class="btn digits" value="9">9</button>
+                    <button type="button" class="btn digits" value="8">8</button>
+                    <button type="button" class="btn digits" value="7">7</button>
+                    <button type="button" class="btn operation">*</button>
+                </div>
+                <div class="flexContainer">
+                    <button type="button" class="btn digits" value="6">6</button>
+                    <button type="button" class="btn digits" value="5">5</button>
+                    <button type="button" class="btn digits" value="4">4</button>
+                    <button type="button" class="btn operation">+</button>
+                </div>
+                <div class="flexContainer">
+                    <button type="button" class="btn digits" value="3">3</button>
+                    <button type="button" class="btn digits" value="2">2</button>
+                    <button type="button" class="btn digits" value="1">1</button>
+                    <button type="button" class="btn operation" value="-">-</button>
+                </div>
+                <div class="flexContainer">
+                    <button type="button" class="btn digits zero" value="0">0</button>
+                    <button type="button" class="btn digits" value=".">.</button>
+                    <button type="submit" class="btn operation">=</button>
+                </div>
+            </section>
+        </form>
+    </main>
+</body>
+</html>

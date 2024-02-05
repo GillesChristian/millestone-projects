@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+html{
+    /* varibles */
+    --opacity-30: 0.3;
+    --opacity-60: 0.6;
+    --white: rgb(255, 255, 255);
+    --inputText: rgb(55 65 81);
+    --shadowColor: #9ca3af;
+    --inputPlaceholder: rgb(55 65 81 / var(--opacity-30));
+    --bg-gray-50: rgb(249 250 251 / var(--opacity-60));
+    --bg-slate-500: rgb(100 116 139 / var(--opacity-30));
+
+    --bg-operator: rgb(148 163 184 / var(--opacity-60));
+    --oaratorH: rgb(71 85 105 / var(--opacity-60));
+
+    --bg-operation: rgb(148 163 184);
+    --oarationH: rgb(71 85 105);
+
+    --bg-digits: rgb(100 116 139);
+    --digitH: rgb(51 65 85 / var(--opacity-60));
+
+}
+body{
+    margin: 3% 0;
+    display: flex;
+    justify-content: center;
+    background: var(--bg-gray-50);
+}
+main{
+    background: var(--bg-slate-500);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    transform: scale(1.05);
+}
+header{
+    margin: 1em 0 2.5em 0;
+}
+h1{
+    font-size: 2.875em;
+    line-height: 2.25em;
+    color: var(--white);
+}
+input{
+    font-size: 2.75rem;
+    line-height: 2.5rem;
+    text-align: right;
+    padding: 0 0.5em;
+    width: 92%;
+    border-radius: 0.25rem;
+    height: 5.5rem;
+    color: var(--inputText);
+    outline: none;
+    border: none;
+    box-shadow: -1px 1px 10px -1px var(--shadowColor);
+}
+input::placeholder{
+    color: var(--inputPlaceholder);
+}
+.flexContainer{
+    margin: 1rem 0 1.5em 0;
+    display: flex;
+    gap: 0.55rem;
+}
+.btn{
+    width: 25%;
+    border-radius: 0.25rem;
+    padding: 0.8em 1.5em;
+    font-size: 2.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 20px 25px -5px var(--shadowColor);
+}
+.btn:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(0.95);
+}
+.operator{
+    background: var(--bg-operator);
+}
+.operator:hover{
+    background: var(--bg-operatorH);
+}
+.operation{
+    background: var(--bg-operation);
+}
+.operation:hover{
+    background: var(--oarationH);
+}
+.digits{
+    background: var(--bg-digits);
+}
+.digits:hover{
+    background: var(--digitH);
+}
+.zero{
+    Width: 50%;
+    padding: 0 3.75em;
+}
+.svg{
+    display: flex;
+    align-items: center;
+}
