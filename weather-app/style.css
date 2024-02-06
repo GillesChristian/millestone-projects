@@ -22,10 +22,10 @@ main{
     width: 80%;
     margin: 5% auto;
     padding: 30px;
-    background: #ffffff4c;
-    -webkit-backdrop-filter: blur(40);
-    backdrop-filter: blur(40);
-    box-shadow: #f0f0f0 1px  1px 15px -10px;
+    background: #ffffff1e;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     border-radius: 5px;
 }
 header{
@@ -59,7 +59,7 @@ h3{
     width: 100px;
     height: 100px;
 }
-.degree{
+.degrees{
     font-size: 4em;
     font-weight: 100;
 }
@@ -108,10 +108,13 @@ button{
 button:hover{
     background: #3e69919c;
 }
+.weatherIcon{
+    font-size: 6em;
+}
 
 @media only screen and (min-width: 1201px) {
     main {
-        width: 60%;
+        width: 40%;
         margin: 3% auto;
     }
 
