@@ -82,10 +82,13 @@ input::placeholder{
     transition: 0.3s ease-in-out;
     transform: scale(0.95);
 }
-.operator{
+.operator,.result{
     background: var(--bg-operator);
 }
 .operator:hover{
+    background: var(--bg-operatorH);
+}
+.result:hover{
     background: var(--bg-operatorH);
 }
 .operation{
