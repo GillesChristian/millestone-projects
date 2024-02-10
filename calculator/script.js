@@ -9,7 +9,13 @@ const digits = document.querySelectorAll('.digits');
 
 const handleButtonClick = function (event) {
     let val = event.target.textContent;
-    screen.value += val;
+    if ( val === '.') {
+        if (!screen.value.includes('.') ) {
+            screen.value += val;
+        } 
+    } else {
+        screen.value += val;
+    }
     console.log(event.target.textContent);
 };
 
