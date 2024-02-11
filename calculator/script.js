@@ -6,7 +6,21 @@ let solution = '';
 
 const screen = document.querySelector('#screen');
 const digits = document.querySelectorAll('.digits');
+const operators = document.querySelectorAll('.operator');
 
+const handleOperators = function (event) {
+    const val = event.target.textContent;
+    if (screen.values = '' && val === '-/+') {
+        screen.values = val;
+    } else if (val === '-/+') {
+        screen.value = parseFloat(screen.value) * -1;
+    } else if (val === '⌫'){
+        screen.value = screen.value.slice(0, -1);
+    }
+};
+operators.forEach(operator => {
+    operator.addEventListener('click', handleOperators);
+});
 const handleButtonClick = function (event) {
     let val = event.target.textContent;
     if ( val === '.') {
