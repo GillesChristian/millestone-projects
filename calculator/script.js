@@ -1,80 +1,94 @@
 'use strict';
 
-let value1 = 0;
-let value2 = 0;
-let solution = '';
+// Variables to store calculator values
+let firstValue = 0;
+let secondValue = 0;
+let currentOperation = '';
 
+// Screen element
 const screen = document.querySelector('#screen');
+
+// Digit buttons
 const digits = document.querySelectorAll('.digits');
+
+// Operator buttons
 const operators = document.querySelectorAll('.operator');
 
-const handleOperators = function (event) {
-    const val = event.target.textContent;
-    if (screen.values = '' && val === '-/+') {
-        screen.values = val;
-    } else if (val === '-/+') {
+// Function to handle operator buttons
+const handleOperators = function(event) {
+    const value = event.target.textContent;
+    if (screen.value === '' && value === '-/+' && !screen.value.includes('-')) {
+        screen.value = '-';
+    } else if (value === '-/+' && screen.value !== '-') {
         screen.value = parseFloat(screen.value) * -1;
-    } else if (val === '⌫'){
+    } else if (value === '⌫') {
         screen.value = screen.value.slice(0, -1);
     }
 };
+
+// Add event listener for operator buttons
 operators.forEach(operator => {
     operator.addEventListener('click', handleOperators);
 });
-const handleButtonClick = function (event) {
-    let val = event.target.textContent;
-    if ( val === '.') {
-        if (!screen.value.includes('.') ) {
-            screen.value += val;
-        } 
+
+// Function to handle digit buttons
+const handleButtonClick = function(event) {
+    const value = event.target.textContent;
+    if (value === '.') {
+        if (!screen.value.includes('.')) {
+            screen.value += value;
+        }
     } else {
-        screen.value += val;
+        screen.value += value;
     }
-    console.log(event.target.textContent);
 };
 
+// Add event listener for digit buttons
 digits.forEach(button => {
     button.addEventListener('click', handleButtonClick);
 });
 
+// Operation buttons
 const operations = document.querySelectorAll('.operation');
 
-const handleOperation = function (event) {
-    value1 = screen.value;
-    solution = event.target.innerText;
-    console.log(solution, value1);
+// Function to handle operation buttons
+const handleOperation = function(event) {
+    firstValue = screen.value;
+    currentOperation = event.target.innerText;
     screen.value = '';
 };
+
+// Add event listener for operation buttons
 operations.forEach(operation => {
     operation.addEventListener('click', handleOperation);
 });
 
-const handleSolution = function () {
-    switch (solution) {
+// Function to perform arithmetic operations
+const handleSolution = function() {
+    secondValue = screen.value;
+    switch (currentOperation) {
         case '+':
-            value2 = screen.value;
-            screen.value = parseFloat(value1) + parseFloat(value2);
+            screen.value = parseFloat(firstValue) + parseFloat(secondValue);
             break;
         case '-':
-            value2 = screen.value;
-            screen.value = parseFloat(value1) - parseFloat(value2);
+            screen.value = parseFloat(firstValue) - parseFloat(secondValue);
             break;
         case '*':
-            value2 = screen.value;
-            screen.value = parseFloat(value1) * parseFloat(value2);
+            screen.value = parseFloat(firstValue) * parseFloat(secondValue);
             break;
         case '/':
-            value2 = screen.value;
-            screen.value = parseFloat(value1) / parseFloat(value2);
+            screen.value = parseFloat(firstValue) / parseFloat(secondValue);
             break;
         default:
             break;
     }
 };
 
-const calculator = document.querySelector('form');
-calculator.addEventListener('submit', e => {
+// Calculator form
+const calculatorForm = document.querySelector('form');
 
+// Add event listener for calculator form submission
+calculatorForm.addEventListener('submit', e => {
     e.preventDefault();
     handleSolution();
 });
