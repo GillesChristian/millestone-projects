@@ -39,8 +39,7 @@ h1{
     letter-spacing: 2px;
 }
 .digital-clock{
-    width: fit-content;
-    width: -moz-fit-content;
+    width: 80%;
     font-size: 5em;
     margin: 0 auto;
     padding: 15px 40px;
@@ -50,12 +49,22 @@ h1{
     border: 1px solid #ffffffcc;
     box-shadow: 1px 1px 50px -20px #0a101f;
     border-radius: 2px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+ 
+}
+.hours, .minutes, .seconds{
+    min-width: 100px;
 }
 small{
     font-size: small;
     font-weight: lighter;
+    margin-right: 15px;
+    margin-left: -5px;
 }
 p{
+    width: 500px;
     margin: 20px 0;
     font-size: 1.3em;
     letter-spacing: 3px;
